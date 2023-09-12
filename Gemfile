@@ -68,8 +68,10 @@ group :development do
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  # Use system testing [https://      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
 end
+
+gem 'faker'
+
+gem 'kaminari'

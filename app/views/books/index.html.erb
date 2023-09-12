@@ -2,13 +2,23 @@
 
 <h1>Books</h1>
 
-<div id="books">
+<div id="books" class="row">
   <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <img src="assets/bookicon.png" class="card-img-top" alt="Book Cover">
+        <div class="card-body">
+          <h5 class="card-title"><%= book.name %></h5>
+          <p class="card-text">Author: <%= book.author %></p>
+          <p class="card-text">Publisher: <%= book.publisher %></p>
+          <p class="card-text">Genre: <%= book.genre %></p>
+          <p class="card-text">ISBN: <%= book.isbn %></p>
+          <p class="card-text">Description: <%= book.description %></p>
+          <%= link_to "Show this book", book, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New book", new_book_path %>
+<%= link_to "New book", new_book_path, class: "btn btn-success" %>
