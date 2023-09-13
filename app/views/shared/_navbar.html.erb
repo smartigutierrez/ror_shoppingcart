@@ -1,22 +1,22 @@
 <nav class="navbar navbar-expand-lg bg-body-success">
   <div class="container-fluid">
-    <a class="navbar-brand" href="<%= pages_index_path %>">ThriftBooks</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-       
-        <li class="nav-item">
-          <form class="d-flex mx-auto" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search a book..." aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= pages_cart_path %>">My Cart</a>
-        </li>
-      </ul>
+    <div class="row align-items-center"> <!-- Create a row to center the elements -->
+      <div class="col-md-3"> <!-- Use Bootstrap columns to control the brand placement -->
+        <a class="navbar-brand" href="<%= pages_index_path %>">ThriftBooks</a>
+      </div>
+      <div class="col-md-6"> <!-- Center the search bar using columns -->
+    <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :search, params[:search], placeholder: 'Search a book...' %>
+      <%= submit_tag "Search" %>
+    <% end %>
+      </div>
+      <div class="col-md-3 text-end"> <!-- Align "My Cart" to the right -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<%= pages_cart_path %>">My Cart</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

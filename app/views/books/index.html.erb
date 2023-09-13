@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Books</h1>
+<div class="text-center"> 
+  <%= paginate @books %>
+  <h1>Books</h1>
+</div>
+
 
 <div id="books" class="row">
   <% @books.each do |book| %>
@@ -21,4 +25,6 @@
   <% end %>
 </div>
 
-<%= link_to "New book", new_book_path, class: "btn btn-success" %>
+<div class="text-center"> 
+  <%= link_to "New book", new_book_path, class: "btn btn-success" %>
+</div>

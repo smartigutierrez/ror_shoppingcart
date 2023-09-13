@@ -1,32 +1,35 @@
-<div id="<%= dom_id book %>">
-  <p>
-    <strong>Name:</strong>
-    <%= book.name %>
-  </p>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="assets/bookicon.png" class="card-img" alt="Book Cover">
+    </div>
+    <div class="col-md-8">
+      <div id="<%= dom_id book %>" class="card-body">
+        <h5 class="card-title"><%= book.name %></h5>
 
-  <p>
-    <strong>Author:</strong>
-    <%= book.author %>
-  </p>
+        <p class="card-text">
+          <strong>Author:</strong> <%= book.author %>
+        </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= book.description %>
-  </p>
+        <p class="card-text">
+          <strong>Description:</strong> <%= book.description %>
+        </p>
 
-    <p>
-    <strong>Genre:</strong>
-    <%= book.genre %>
-  </p>
+        <p class="card-text">
+          <strong>Genre:</strong> <%= book.genre %>
+        </p>
 
-  <p>
-    <strong>ISBN:</strong>
-    <%= book.isbn %>
-  </p>
+        <p class="card-text">
+          <strong>ISBN:</strong> <%= book.isbn %>
+        </p>
 
-  <p>
-    <strong>Publisher:</strong>
-    <%= book.publisher %>
-  </p>
+        <p class="card-text">
+          <strong>Publisher:</strong> <%= book.publisher %>
+        </p>
 
+        <!-- Purchase button -->
+        <button class="btn btn-success">Purchase</button>
+      </div>
+    </div>
+  </div>
 </div>

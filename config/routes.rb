@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :books
+
   root 'pages#index'
   get 'pages/index'
   get 'pages/about'
